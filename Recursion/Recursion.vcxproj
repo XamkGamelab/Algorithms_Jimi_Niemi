@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ackermanncpp.cpp" />
+    <ClCompile Include="AlgorithmAnalyzis.cpp" />
     <ClCompile Include="FibonacciWithoutArray.cpp" />
     <ClCompile Include="Recursion.cpp" />
   </ItemGroup>
