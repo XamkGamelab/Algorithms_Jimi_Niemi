@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Performance", "Performance\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Recursion", "Recursion\Recursion.vcxproj", "{920C89F3-4E7F-49F7-80C6-C154FC512610}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{920C89F3-4E7F-49F7-80C6-C154FC512610}.Release|x64.Build.0 = Release|x64
 		{920C89F3-4E7F-49F7-80C6-C154FC512610}.Release|x86.ActiveCfg = Release|Win32
 		{920C89F3-4E7F-49F7-80C6-C154FC512610}.Release|x86.Build.0 = Release|Win32
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Debug|x64.ActiveCfg = Debug|x64
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Debug|x64.Build.0 = Debug|x64
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Debug|x86.Build.0 = Debug|Win32
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Release|x64.ActiveCfg = Release|x64
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Release|x64.Build.0 = Release|x64
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Release|x86.ActiveCfg = Release|Win32
+		{EECE1B57-CEF4-4D55-BDC1-159E5E15E3C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
