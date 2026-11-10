@@ -50,6 +50,7 @@ int Heap::del_min()
 
 	int min = heapArray[1];
 	int lastIndex = heapArray[length()];
+
 	heapArray[1] = lastIndex;
 	heapArray[0]--;
 

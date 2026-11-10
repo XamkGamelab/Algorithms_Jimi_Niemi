@@ -4,7 +4,7 @@
 #include <cstdlib>   
 #include <ctime>     
 
-void heapSort(std::vector<int>& numbers, int count)
+void HeapSort(std::vector<int>& numbers, int count)
 {
     Heap heap(count);
 
@@ -13,7 +13,7 @@ void heapSort(std::vector<int>& numbers, int count)
     {
         heap.insert(numbers[i]);
     }
-    
+
     //DEL MIN
     for (int i = 0; i < count; i++)
     {
@@ -21,7 +21,7 @@ void heapSort(std::vector<int>& numbers, int count)
     }
 }
 
-bool isSorted(std::vector<int>& numbers, int count)
+bool IsSorted(std::vector<int>& numbers, int count)
 {
     //CHECK IF THE NUMBERS ARE SORTED IN THE COUNT
     for (int i = 1; i < count; i++)
@@ -35,7 +35,7 @@ bool isSorted(std::vector<int>& numbers, int count)
     return true;
 }
 
-void testSort(int count)
+void TestSort(int count)
 {
     std::vector<int> numbers(count);
 
@@ -44,10 +44,10 @@ void testSort(int count)
     {
         numbers[i] = rand();
     }
-    
+
     //CHECK THE TIME BETWEEN BEFORE AND AFTER SORT
     clock_t start = clock();
-    heapSort(numbers, count);
+    HeapSort(numbers, count);
     clock_t end = clock();
 
     double seconds = (double)(end - start) / CLOCKS_PER_SEC;
@@ -55,7 +55,7 @@ void testSort(int count)
     //PRINT THE TIME HOW LONG IT TOOK TO SORT THE NUMBERS
     std::cout << count << " numbers: " << seconds << " seconds!";
 
-    if (isSorted(numbers, count))
+    if (IsSorted(numbers, count))
     {
         std::cout << " Sorted OK!" << std::endl;
     }
@@ -67,11 +67,29 @@ void testSort(int count)
 
 int main()
 {
-    srand(time(0));   
+    // HEAP TEST
+    Heap heap(20);
+    int data[] = { 17, 11, 6, 14, 22, 8, 1, 16, 10, 19, 12, 3, 5, 15, 13 };
 
-    testSort(100000);
-    testSort(1000000);
-    testSort(10000000);
+    for (int i = 0; i < 15; i++)
+    {
+        heap.insert(data[i]);
+    }
+
+    std::cout << "Heap after inserts: ";
+    heap.print();
+
+    std::cout << "Removed: " << heap.del_min() << std::endl;
+    std::cout << "Heap after del_min: ";
+    heap.print();
+    std::cout << std::endl;
+
+    // SORTING AND TIMING
+    srand(time(0));
+
+    TestSort(100000);
+    TestSort(1000000);
+    TestSort(10000000);
 
     return EXIT_SUCCESS;
 }
